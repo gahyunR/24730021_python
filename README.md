@@ -3,6 +3,7 @@
 ## 3주차 python 
 
 
-```python
-for i in range(1,5):
-   for j in range(1,5):
+- get_area()
+- 중첩 별찍기
+- 행, 열, 문자
+- 가변인수 합계
