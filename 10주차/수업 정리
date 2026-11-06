@@ -1,0 +1,187 @@
+# 여러 변수에 각각 정수 저장 
+b, c, d = 1, 2, 3
+print(type(b), type(c), type(d))
+
+# 튜플 - 여러값을 쉼표로 구분하면 튜플로 인식
+# 튜플은 요소값을 변경할 수 없음 
+a = 1, 2, 3
+print(type(a))
+
+# tuple -> list 로 변환 
+a = 1, 2, 3
+a = list(a)
+print(type(a))
+
+#list -> tuple 로 변환 
+b = [1, 2, 3]
+b = tuple(b)
+print(b)
+
+# set(집합) - 중복된 값을 허용하지 않고 순서가 없음 
+b = [1, 2, 3, 1, 2, 3, 1, 2, 3]
+a = set(b)
+print(a)
+
+# * 언패킹 연산자 - 요소를 하나씩 꺼내서 출력 
+b = [1, 2, 3, 1, 2, 3]
+a = set(b)
+print(*a)
+
+# set() - 리스트나 튜플을 집합으로 변환
+a = set((1, 2, 3, 1, 2, 3, 1, 2, 3))
+print(a)
+
+#len() - 집합에 들어 있는 요소의 개수 변환 
+frults = {"apple", "banana", "grape"}
+size = len(frults)
+print(size)
+
+#in - 집합에 특정 요소가 포함되어 있는지 확인
+fruits = {"apple", "banana", "grape"}
+
+if "apple" in fruoits:
+   print("apple 있습니다.")
+else:
+   print("없습니다")
+
+#in - 키보드로 입력받은 겂이 집합에 있는지 확인
+string = input()
+fruits {"apple", "banana", "grape"}
+
+if string in fruits:
+   print(string, "있습니다.")
+else:
+   print(string, "없습니다.")
+
+#집합 출력 - 요소의 출력 순서가 정해져 있지 않음 
+fruits = {"apple", "banana", "grape"}
+print(fruits)
+
+#for문 - 집합의 요소를 하나씩 출력
+fruits = {"apple", "banana", "grape"}
+
+for x in fruits:
+    print(x, end=" ")
+print()
+
+# sorted() - 오름차순 정렬
+fruits = {"apple", "banana", "grape"}
+
+for x in sorted(fruits):
+    print(x, end=" ")
+print()
+
+# sorted(reverse = True) - 내림차순 정리 
+fruits = {"apple", "banana", "grape"}
+
+for x in sorted(fruits, reverse = True):
+    print(x, end=" ")
+print()
+
+#add() - 집합에 요소 추가 
+fruits = {"apple", "banana", "grape"}
+fruits.add("kiwi")
+print(fruits)
+
+#remove() - 집합에서 요소 삭제 
+#존재하지 않는 요소를 삭제하면 오류 발생
+fruits = {"apple", "banana", "grape"}
+fruits.remove("kiwi")
+print(fruits)
+
+#discard() - 요소 삭제, 없는 요소여도 오류가 발생하지 않음 
+fruits = {"apple", "banana", "grape"}
+fruits.discard("O")
+print(fruits)
+
+# clear() - 집합의 모든 요소 삭제
+fruits = {"apple", "banana", "grape"}
+fruits.clear()
+print(fruits)
+
+# 딕셔너리 - key와 value로 구성 
+num = {"one":1, "two":2, "three":3}
+print(num["one"]) #대괄호 []안에 key를 입력하여 value 출력
+print(num["four"]) #존재하지 않는 key를 조회하면 key Error 발생 
+
+#get() - 특정 key에 해장하는 value 가져오기 
+print(num.get("one"))
+
+#get() - 존재하지 않는 key를 조회해도 오류가 발생하지 않음
+print(num.get("four", "해당키가 없습니다."))
+
+# get() - 요소별 개수 세기
+fruits - {"apple", "banana","apple", "melon", "banana", "apple"}
+count = {}
+
+for fruit in fruits:
+    count[fruit] = count.get)fruit, 0) + 1
+
+print(count)
+
+count = [10, 20, 30, 40] # list 의 []- index
+print(count[0])
+-- 딕셔너리 항목, 문자열, 슬라이싱 --
+# items() - 딕셔너리의 key 와 value를 함께 가져오기
+count = {"apple": 3. "banana": 2, "melon": 1}
+
+for key, value in count.item():
+    print(key, value)
+
+#슬라이싱 [start:end:step]
+#인덱스 6부터 마지막까지 출력 
+print(s[6:])
+
+#인덱스 0부터 4까지 
+print(s[0:5])
+
+#시작 인덱스를 생략하면 처음부터 출력 
+print(s[:5])
+
+# 문자열 거꾸로 출력 
+print)s[::-1])
+
+#문자열 + 문자열 - 두 문자열 연결 
+print(s[:5] + s[6:])
+
+#in - 문자열에 특정 문자 또는 문자열이 포함되어 있는지 확인 
+print("a" in "abc")
+
+#영어의 대소문자 구분 
+print("a" in "Abc")
+
+#문자열에 특정 문자가 포함되어 있지 않은지 확인
+print("a" not in "abc")
+
+#문자열과 문자열을 + 연산자로 연결 
+name = "곽지석"
+age = 21
+print("제 이름은" + name + "입니다.")
+print("제 나이는" + age + "입니다.") # -> type Error
+print("제 나이는" + str(age) + "입니다.") # -> 정수를 문자열로 형변환 
+
+# % 서식문자 - 자료형에 맞게 값을 출력
+# %d 정수, %f 실수, %s 문자열, %c 문자
+print("제 이름은 %s 입니다." % name)
+
+
+# %s - 여러 값을 문자열 형태로 출력
+print("제 이름은 %s 입니다. 저는 %s 살 입니다." % (name, age))
+
+
+# f-string 활용해서 문자열 출력
+print(f"제 이름은 {name}입니다, 저는 {age} 살 입니다.")
+
+
+# format() 활용해서 문자열 출력
+print("제 이름은 {}입니다, 저는 {} 살 입니다.".format(name, age))
+
+
+# format() - 번호를 지정하여 출력 순서 정의
+print("제 이름은 {0}입니다, 저는 {1} 살 입니다.".format(name, age))
+
+
+# format() - 번호를 생략하면 순서대로 출력
+print("제 이름은 {}입니다, 저는 {} 살 입니다.".format(name, age))
+
+
