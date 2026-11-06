@@ -1,0 +1,14 @@
+# tuple -> list list()로 변환 
+a = 1, 2, 3
+a = list(a)
+print(type(a))
+
+#list는 대괄호 [] 생성 
+b = [1, 2, 3]
+print(b)
+
+#list -> tuple tuple()로 변환 
+b = tuple(b)
+print(b)
+print(type(b))
+
