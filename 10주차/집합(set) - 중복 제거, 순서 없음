@@ -1,0 +1,23 @@
+# set() - 리스트를 집합으로 뱐한하면 중복이 제거됨
+b = [1, 2, 3, 1, 2, 3, 1, 2, 3]
+a = set(b)
+print(a)
+
+# * - 언패킹 연산자로 요소를 하나씩 출력 
+b = [1, 2, 3, 1, 2, 3, 1, 2, 3]
+a = set(b)
+print(*a)
+
+# len() - 집합에 들어 있는 요소 개수 
+fruits = {"apple", "banana", "grape"}
+size = len(fruits))
+print(size)
+
+# in - 집합에 특정 값이 포함되는지 확인 
+fruits = {"apple", "banana", "grape")
+if "apple" in fruits:
+   print("apple 있습니다.")
+else:
+   print("없습니다.")
+
+in - 키보드로 입력받은 값이 집합에 있는지 확인 
